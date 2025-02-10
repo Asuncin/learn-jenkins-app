@@ -32,6 +32,7 @@ pipeline {
                    echo #$FILE does not exist"
                 fi
                 '''
+                npm test
 
             } 
         }
