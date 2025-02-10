@@ -24,7 +24,15 @@ pipeline {
             steps{
                 sh 'echo "Test stage" '
                 sh 'echo "index.html does exist ?"'
-                sh 'test -f "./build/index.html" | echo'
+                sh '''
+                FILE=./build/index.html
+                if test -f "$FILE"; then
+                   echo "$FILE exists"
+                else
+                   echo #$FILE does not exist"
+                fi
+                '''
+
             } 
         }
     }
