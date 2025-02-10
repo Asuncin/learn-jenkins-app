@@ -24,7 +24,7 @@ pipeline {
             steps{
                 sh 'echo "Test stage" '
                 sh 'echo "index.html does exist ?"'
-                sh 'test -f "/build/index.html" | echo'
+                sh 'test -f "./build/index.html" | echo'
             } 
         }
     }
