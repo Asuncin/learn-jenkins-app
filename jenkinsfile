@@ -23,7 +23,8 @@ pipeline {
         stage('Test'){
             steps{
                 sh 'echo "Test stage" '
-                sh 'test -f "/build/index.html"'
+                sh 'echo "index.html does exist ?"'
+                sh 'test -f "/build/index.html" | echo'
             } 
         }
     }
