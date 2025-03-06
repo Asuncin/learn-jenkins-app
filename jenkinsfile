@@ -83,8 +83,8 @@ pipeline {
 
             steps{
                 sh '''
-                    npm install netfly-cli
-                    node_modules/.bin/netfly --version
+                    npm install netlify-cli
+                    node_modules/.bin/netlify --version
                 '''
             }
         }
